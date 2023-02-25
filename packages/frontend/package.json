@@ -1,0 +1,37 @@
+{
+  "name": "@simple-chat/frontend",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.4.9",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "axios": "^1.3.3",
+    "framer-motion": "^9.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
+    "swr": "^2.0.3"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "jest-css-modules": "^2.1.0",
+    "jest-environment-jsdom": "^29.4.2",
+    "stylelint": "^14.16.1",
+    "stylelint-config-recess-order": "^3.1.0",
+    "stylelint-config-standard": "^29.0.0",
+    "vite": "^4.1.1"
+  }
+}

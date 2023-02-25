@@ -1,0 +1,42 @@
+{
+  "name": "@simple-chat/backend",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn src/index.ts | pino-pretty --ignore 'pid,hostname,reqId,responseTime,req,res' --messageFormat '[{req.method} {req.url}] {msg}'",
+    "clean": "rimraf dist",
+    "tsc": "tsc",
+    "build": "npm-run-all clean tsc",
+    "start": "node .",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:seed": "prisma db seed",
+    "prisma:dev": "run-s -l prisma:generate prisma:migrate prisma:seed"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^4.10.0",
+    "bcrypt": "^5.1.0",
+    "date-fns": "^2.29.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "pino-http": "^8.3.3"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/express": "^4.17.17",
+    "@types/jsonwebtoken": "^9.0.1",
+    "@types/node": "^18.13.0",
+    "npm-run-all": "^4.1.5",
+    "prisma": "^4.10.0",
+    "rimraf": "^4.1.2",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.1.2"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  }
+}
